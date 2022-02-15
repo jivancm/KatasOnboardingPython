@@ -1,0 +1,60 @@
+PS C:\AppData\LaunchX\01-python> python .\open.py
+Traceback (most recent call last):
+  File "C:\AppData\LaunchX\01-python\open.py", line 5, in <module>
+    main()
+  File "C:\AppData\LaunchX\01-python\open.py", line 2, in main
+    open("/path/to/mars.jpg")
+FileNotFoundError: [Errno 2] No such file or directory: '/path/to/mars.jpg'
+PS C:\AppData\LaunchX\01-python> 
+
+
+
+; Sin que exista el archivo de configuración config.txt
+
+PS C:\AppData\LaunchX\01-python> python .\config.py
+Couldn't find the config.txt file!
+PS C:\AppData\LaunchX\01-python> 
+
+
+
+; Cuando existe el archivo config.txt
+PS C:\AppData\LaunchX\01-python> python .\config.py
+PS C:\AppData\LaunchX\01-python>
+
+
+
+; Eliminando el archivo config.txt y creando una carpeta con el nombre config.txt
+PS C:\AppData\LaunchX\01-python> python .\config.py
+Traceback (most recent call last):
+  File "C:\AppData\LaunchX\01-python\config.py", line 8, in <module>
+    main()
+  File "C:\AppData\LaunchX\01-python\config.py", line 3, in main
+    configuration = open('config.txt')
+PermissionError: [Errno 13] Permission denied: 'config.txt'
+PS C:\AppData\LaunchX\01-python>
+
+
+
+
+; Detectando todas las excepciones con Exception
+PS C:\AppData\LaunchX\01-python> python .\config.py
+Couldn't find the config.txt file!
+PS C:\AppData\LaunchX\01-python> 
+
+
+
+; Agregando excepciones particulares para cada tipo de error FileNotFound, IsADirectoryError, PermissionError:
+; Resultado cuando config.txt es una carpeta
+PS C:\AppData\LaunchX\01-python> python .\config.py
+You have not permission to open config.txt file
+PS C:\AppData\LaunchX\01-python> 
+
+; Resultado cuando no existe config.txt
+PS C:\AppData\LaunchX\01-python> python .\config.py
+Couldn't find the config.txt file!
+PS C:\AppData\LaunchX\01-python> 
+
+; En win11 el error detectado por python es de permisos no de fólder
+
+
+

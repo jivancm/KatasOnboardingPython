@@ -1,0 +1,50 @@
+Microsoft Windows [Versión 10.0.22000.493]
+(c) Microsoft Corporation. Todos los derechos reservados.
+
+C:\AppData\LaunchX\01-python>python -m venv env
+
+C:\AppData\LaunchX\01-python>source --help
+"source" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+
+C:\AppData\LaunchX\01-python>cd env       
+
+C:\AppData\LaunchX\01-python\env>dir
+ El volumen de la unidad C es OS
+ El número de serie del volumen es: 6C76-61E6
+
+ Directorio de C:\AppData\LaunchX\01-python\env
+
+11/02/2022  02:46 p. m.    <DIR>          .
+11/02/2022  02:46 p. m.    <DIR>          ..
+11/02/2022  02:46 p. m.    <DIR>          Include
+11/02/2022  02:46 p. m.    <DIR>          Lib
+11/02/2022  02:46 p. m.               117 pyvenv.cfg
+11/02/2022  02:46 p. m.    <DIR>          Scripts
+               1 archivos            117 bytes
+               5 dirs  188,812,165,120 bytes libres
+
+C:\AppData\LaunchX\01-python\env>source
+"source" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+
+C:\AppData\LaunchX\01-python\env>Scripts\activate.bat
+
+(env) C:\AppData\LaunchX\01-python\env>pip freeze
+
+(env) C:\AppData\LaunchX\01-python\env>pip install python-dateutil
+Collecting python-dateutil
+  Using cached python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+Collecting six>=1.5
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Installing collected packages: six, python-dateutil
+Successfully installed python-dateutil-2.8.2 six-1.16.0
+WARNING: You are using pip version 21.1.1; however, version 22.0.3 is available.
+You should consider upgrading via the 'c:\appdata\launchx\01-python\env\scripts\python.exe -m pip install --upgrade pip' command.
+
+(env) C:\AppData\LaunchX\01-python\env>pip freeze
+python-dateutil==2.8.2
+six==1.16.0
+
+(env) C:\AppData\LaunchX\01-python\env>Scripts\deactivate.bat
+C:\AppData\LaunchX\01-python\env>
